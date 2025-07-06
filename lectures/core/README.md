@@ -12,6 +12,7 @@
 
 - [section2.md](docs/section2.md) – 객체지향 설계와 스프링
 - [section3.md](docs/section3.md) – 스프링 핵심 원리 이해1 - 예제 만들기
+- [section4.md](docs/section4.md) – 스프링 핵심 원리 이해2 - 객체지향 원리 적용
 
 ※ 각 파일은 해당 강의 섹션의 주요 개념 정리, 키워드 설명, 코드 분석을 포함합니다.
 
