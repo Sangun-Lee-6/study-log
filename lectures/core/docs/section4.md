@@ -413,3 +413,56 @@ public class OrderServiceImpl implements OrderService {
 - DI는 IoC의 구현 방식 중 일부
 
 # 9. 스프링으로 전환하기
+
+### 📌 무엇을 구현했는가?
+
+✅ 순수 자바 기반 DI에서 스프링 기반 DI로 전환
+
+- 자바 기반 DI : AppConfig 수동 생성
+- 스프링 기반 DI : AppConfig에 @Configuration, @Bean 사용
+
+✅ `MemberApp`, `OrderApp`에 스프링 컨테이너 (`ApplicationContext`)를 도입
+
+✅ `AppConfig`는 스프링이 관리하는 설정 클래스로 역할이 바뀜
+
+- 이제 객체 생성 및 의존 주입을 스프링이 자동 처리하도록 설정
+
+### 📌 왜 이렇게 설계했는가?
+
+✅ AppConfig를 스프링 설정으로 변경
+
+- `@Configuration`: 스프링이 해당 클래스를 설정 정보로 인식
+- `@Bean`: 해당 메서드의 리턴 객체를 스프링 빈으로 등록
+- 개발자가 `new`로 객체를 만들지 않고, 스프링이 대신 객체 생성 및 관리
+
+✅ `MemberApp`, `OrderApp`에서 스프링 컨테이너 사용
+
+- `ApplicationContext`는 스프링 컨테이너 ⇒ 객체 생성/조회/DI를 담당
+- 이전에는 개발자가 직접 `AppConfig.memberService()` 호출
+- 이제는 `applicationContext.getBean("memberService")`로 스프링 컨테이너에서 빈을 찾아 사용
+
+👉 `ApplicationContext`
+
+- 스프링 컨테이너
+- 빈 생성, DI, 생명 주기 관리 담당
+
+👉 `@Configuration`
+
+- 스프링이 해당 클래스를 설정 클래스로 인식하는 어노테이션
+- 이 클래스 내부에는 Bean 정의가 포함되어 있음
+
+👉 `@Bean`
+
+- 스프링이 해당 메서드의 리턴값을 스프링 컨테이너에 빈으로 등록
+- 스프링 빈의 이름 : `@Bean`의 메서드명과 동일
+- 스프링 빈 조회 : `applicationContext.getBean("빈이름", 타입)`
+
+### 📌 자바 기반 DI와 스프링 컨테이너의 차이점
+
+| 항목 | AppConfig (`new`) 방식 | 스프링 컨테이너 방식 |
+| --- | --- | --- |
+| 객체 관리 | 개발자 수동 관리 | 컨테이너 자동 관리 (싱글톤, 생명주기 등) |
+| DI 구성 | 정적, 고정 연결 | 동적, 유연한 빈 조회 가능 |
+| AOP, 트랜잭션 | 불가능 | `@Transactional`, `@AOP` 가능 |
+| 설정 구조 | 단일 클래스 중심 | 설정 클래스 간 분리/재사용 가능 |
+| 테스트/확장 | 제한적 | Mock, 조건부 주입 등 유연 |
