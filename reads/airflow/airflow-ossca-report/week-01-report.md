@@ -10,8 +10,8 @@
 
 ## 1. 참여 전 준비
 
-- [Airflow 기여 프로세스 이해](<../Airflow 기여 프로세스 이해.md>)
-- [로컬 개발 환경 준비 상태(Breeze)](<../로컬 개발 환경 준비 상태(Breeze).md>)
+- [Airflow 기여 프로세스 이해](<../reference/Airflow 기여 프로세스 이해.md>)
+- [로컬 개발 환경 준비 상태(Breeze)](<../reference/로컬 개발 환경 준비 상태(Breeze).md>)
 
 ## 2. 당일 활동 기록
 
