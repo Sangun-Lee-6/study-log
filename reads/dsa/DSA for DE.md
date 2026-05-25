@@ -205,7 +205,7 @@ heapq.heappop(a)
 ## 1.8. Graph Search
 
 1. Depth First Search — DFS
-   - (링크)
+   - [dfs](./reference/dfs.md)
 
 2. Breadth First Search — BFS
    - (링크)
@@ -228,7 +228,7 @@ heapq.heappop(a)
 
 ## 2.2. Graph
 
-- Number of Islands
+- [Number of Islands](<./dfs-bfs/Number of Islands.md>)
 - Number of Connected Components
 - Course Schedule
 
