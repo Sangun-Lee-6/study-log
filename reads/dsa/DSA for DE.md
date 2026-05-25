@@ -220,7 +220,7 @@ heapq.heappop(a)
 
 ## 2.1. Intervals
 
-- Insert Interval
+- [Insert Interval](<./intervals/Insert interval.md>)
 - Merge Intervals
 - Non-overlapping Intervals
 
