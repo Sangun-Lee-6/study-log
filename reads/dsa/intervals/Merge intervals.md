@@ -1,3 +1,5 @@
+> 링크 : https://leetcode.com/problems/merge-intervals/description/
+
 - 겹치는 구간들을 하나의 큰 구간으로 합치는 문제
 - 핵심 로직
 
