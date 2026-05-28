@@ -1,5 +1,3 @@
-# 템플릿
-
 > 링크 : https://leetcode.com/problems/get-the-size-of-a-dataframe/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata
 
 ## 1. Grain 확인
