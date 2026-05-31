@@ -16,7 +16,7 @@
 - 즉, 이전에 가격으로 팔 수 없으므로, 항상 이후의 가격만 고려하면 됨
 
 ```python
-    class Solution:
+class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 
         max_profit=0
